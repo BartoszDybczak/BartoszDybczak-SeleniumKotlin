@@ -1,4 +1,4 @@
-package com.automationpractice.myproject.base;
+package Base;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;

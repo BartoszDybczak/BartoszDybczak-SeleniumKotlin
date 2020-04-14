@@ -1,4 +1,4 @@
-package com.automationpractice.myproject.base;
+package Base;
 
 public class TestUtilities extends TestBase {
 
