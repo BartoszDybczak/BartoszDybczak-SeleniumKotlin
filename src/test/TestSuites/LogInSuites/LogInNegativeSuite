@@ -1,0 +1,87 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="LogInNegativePathTestSuite" verbose="1">
+    <test name="Incorrect Email Format - Chrome">
+        <parameter name="email" value="Testo@"></parameter>
+        <parameter name="password" value="tttttt"></parameter>
+        <parameter name="expectedMessage" value="Invalid email address."></parameter>
+        <classes>
+            <class name="logintests.LogInNegativePath">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Empty Email - Chrome">
+        <parameter name="email" value=""></parameter>
+        <parameter name="password" value="tttttt"></parameter>
+        <parameter name="expectedMessage" value="An email address required."></parameter>
+        <classes>
+            <class name="logintests.LogInNegativePath">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Incorrect password - Chrome">
+        <parameter name="email" value="johnKowalski2137@wp.pl"></parameter>
+        <parameter name="password" value="shermanCareHospital"></parameter>
+        <parameter name="expectedMessage" value="Authentication failed."></parameter>
+        <classes>
+            <class name="logintests.LogInNegativePath">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Empty password - Chrome">
+        <parameter name="email" value="johnKowalski2137@wp.pl"></parameter>
+        <parameter name="password" value=""></parameter>
+        <parameter name="expectedMessage" value="Password is required."></parameter>
+        <classes>
+            <class name="logintests.LogInNegativePath">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Incorrect Email Format - Firefox">
+        <parameter name="email" value="Testo@"></parameter>
+        <parameter name="password" value="tttttt"></parameter>
+        <parameter name="expectedMessage" value="Invalid email address."></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="logintests.LogInNegativePath">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Empty Email - Firefox">
+        <parameter name="email" value=""></parameter>
+        <parameter name="password" value="tttttt"></parameter>
+        <parameter name="expectedMessage" value="An email address required."></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="logintests.LogInNegativePath">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Incorrect password - Firefox">
+        <parameter name="email" value="johnKowalski2137@wp.pl"></parameter>
+        <parameter name="password" value="shermanCareHospital"></parameter>
+        <parameter name="expectedMessage" value="Authentication failed."></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="logintests.LogInNegativePath">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Empty password - Firefox">
+        <parameter name="email" value="johnKowalski2137@wp.pl"></parameter>
+        <parameter name="password" value=""></parameter>
+        <parameter name="expectedMessage" value="Password is required."></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="logintests.LogInNegativePath">
+            </class>
+        </classes>
+    </test>
+</suite>

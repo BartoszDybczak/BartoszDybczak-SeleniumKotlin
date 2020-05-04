@@ -1,0 +1,80 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="CreateAccountNegativePath" verbose="1">
+
+    <test name="IncorrectEmailFormatTest - Chrome">
+        <parameter name="email" value="Testo@"></parameter>
+        <parameter name="expectedMessage" value="Invalid email address."></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="createaccounttests.CreateAccountNegativePath">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EmailAlreadyUsedTest - Chrome">
+        <parameter name="email" value="johnKowalski2137@wp.pl"></parameter>
+        <parameter name="expectedMessage"
+                   value="An account using this email address has already been registered."></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="createaccounttests.CreateAccountNegativePath">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EmptyEmailTest - Chrome">
+        <parameter name="email" value=""></parameter>
+        <parameter name="expectedMessage" value="Invalid email address."></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="createaccounttests.CreateAccountNegativePath">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="IncorrectEmailFormatTest - Firefox">
+        <parameter name="email" value="Testo@"></parameter>
+        <parameter name="expectedMessage" value="Invalid email address."></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="createaccounttests.CreateAccountNegativePath">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EmailAlreadyUsedTest - Firefox">
+        <parameter name="email" value="johnKowalski2137@wp.pl"></parameter>
+        <parameter name="expectedMessage"
+                   value="An account using this email address has already been registered."></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="createaccounttests.CreateAccountNegativePath">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EmptyEmailTest - Firefox">
+        <parameter name="email" value=""></parameter>
+        <parameter name="expectedMessage" value="Invalid email address."></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="createaccounttests.CreateAccountNegativePath">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

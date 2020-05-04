@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="RegistrationTestSuite" verbose="1">
+    <parameter name="browser" value="chrome"></parameter>
+    <test name="CreateAccountHappyPath - Chrome">
+        <classes>
+            <class name="createaccounttests.CreateAccountHappyPath">
+            </class>
+        </classes>
+    </test>
+
+    <test name="CreateAccountHappyPath - Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="createaccounttests.CreateAccountHappyPath">
+            </class>
+        </classes>
+    </test>
+</suite>

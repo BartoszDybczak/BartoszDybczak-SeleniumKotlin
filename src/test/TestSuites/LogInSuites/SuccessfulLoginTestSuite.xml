@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="RegistrationTestSuite" verbose="1">
+    <test name="Successful LogIn - Chrome">
+        <classes>
+            <class name="logintests.SuccessfulLogin">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Successful LogIn - Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="logintests.SuccessfulLogin">
+            </class>
+        </classes>
+    </test>
+</suite>
