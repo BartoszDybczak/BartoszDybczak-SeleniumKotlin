@@ -3,24 +3,32 @@ package homepage
 import base.TestBase
 import pages.HomePage
 import org.testng.Assert
+import org.testng.annotations.BeforeMethod
 import org.testng.annotations.Test
 import pages.SearchPage
 
 class HomePageTests() : TestBase() {
 
-    @Test
-    fun userCanSeeContactNumber() {
-        val homePage = HomePage(driver)
+    private lateinit var homePage: HomePage
+    private lateinit var search: SearchPage
+
+    @BeforeMethod
+    fun setup() {
+        homePage = HomePage(driver)
+        search  = SearchPage(driver)
+
         homePage.openHomePage()
 
+    }
+
+    @Test
+    fun userCanSeeContactNumber() {
         val expectedPhoneNumber = "0123-456-789"
         Assert.assertEquals(homePage.getPhoneNumberText(), expectedPhoneNumber)
     }
 
     @Test
     fun userCanClickOnItemCard() {
-        val homePage = HomePage(driver)
-        homePage.openHomePage()
         val itemDetailPage = homePage.clickOnItemCard()
 
         val expectedPrice = "$16.51"
@@ -29,10 +37,6 @@ class HomePageTests() : TestBase() {
 
     @Test
     fun userCanSearchForAnItem() {
-        val homePage = HomePage(driver)
-        val search = SearchPage(driver)
-
-        homePage.openHomePage()
         search.searchForItem("dress")
         search.clickOnSearchButton()
 
@@ -47,9 +51,6 @@ class HomePageTests() : TestBase() {
 
     @Test
     fun userCanWriteEmailMessage() {
-        val homePage = HomePage(driver)
-        homePage.openHomePage()
-
         val contactUsPage = homePage.clickOnContactUs()
         contactUsPage.selectSubject("Customer service")
 
